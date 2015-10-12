@@ -1510,11 +1510,12 @@
                     if (plugin.settings.default_position == 'left_align') {
                         top = $element.offset().top + plugin.settings.offset[1] + $element.outerHeight() + 10;
                         left = $element.offset().left;
+                        
+                        if (top + datepicker_height > window_scroll_top + window_height) {
+                        top = $element.offset().top + plugin.settings.offset[1] - datepicker_height;
+                        }
                     }
 
-                    if (top + datepicker_height > window_scroll_top + window_height) {
-                        top = $element.offset().top + plugin.settings.offset[1] - datepicker_height;
-                    }
                     // make the date picker visible
                     datepicker.css({
                         'left': left,
