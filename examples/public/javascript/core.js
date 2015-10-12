@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
-    $('#datepicker-example1').Zebra_DatePicker();
+    $('#datepicker-example1').Zebra_DatePicker({
+        default_position: 'left_align'
+    });
 
     $('#datepicker-example2').Zebra_DatePicker({
-        direction: 1    // boolean true would've made the date picker future only
-                        // but starting from today, rather than tomorrow
+        direction: 1,    // boolean true would've made the date picker future only
+        default_position: 'left_align'                        // but starting from today, rather than tomorrow
     });
 
     $('#datepicker-example3').Zebra_DatePicker({
